@@ -15,11 +15,11 @@ public class PlayerMovement : MonoBehaviour {
         _rb = GetComponent<Rigidbody2D>();
     }
 
-    void Update() {
+    private void Update() {
         _input = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
         _input = Vector2.ClampMagnitude(_input, 1f);
     }
-    void FixedUpdate() {
+    private void FixedUpdate() {
         _rb.MovePosition((Vector2)transform.position + _input * Time.deltaTime * playerMoveSpeed);
     }
 }
