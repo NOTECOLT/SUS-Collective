@@ -13,7 +13,7 @@ public class PlayerMovement : MonoBehaviour {
     private float _dashTimer = 0.0f;
     private bool _isDashing = false;
 
-    private bool _dashUnlocked = false;
+    [SerializeField] private bool _dashUnlocked = false;
 
     // Public Variables
     public float moveSpeed = 5.0f;
