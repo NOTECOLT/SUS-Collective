@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class EnemyDeath : MonoBehaviour
 {
-    void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D other)
 	{
-		Debug.Log("hit");
+		if (other.gameObject.tag == "Player Attack")
+		{
+			Destroy(gameObject);
+		}
 	}
 }

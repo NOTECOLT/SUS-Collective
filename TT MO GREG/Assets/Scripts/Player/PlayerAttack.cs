@@ -38,11 +38,11 @@ public class PlayerAttack : MonoBehaviour {
 
     // For Detecting Attack Input
     private void AttackInput() {
-        if (Input.GetKeyDown(KeyCode.J) && !_isAttacking) {
+        if (Input.GetKeyUp(KeyCode.J) && !_isAttacking) {
             SetAttackState(true);
         }
 
-        if (_isAttacking) {_attackTimer += Time.deltaTime; Debug.Log(_attackTimer);}
+        if (_isAttacking) _attackTimer += Time.deltaTime;
 
         if (_attackTimer >= attackTime && _isAttacking) {
             SetAttackState();

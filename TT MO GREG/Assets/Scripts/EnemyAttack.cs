@@ -7,9 +7,10 @@ public class EnemyAttack : MonoBehaviour
 {
 	[SerializeField] private Transform target;
 	[SerializeField] private string enemyType;
+	[SerializeField] private GameObject bullet;
 	private float attackDistance;
 
-	private void Start()
+	private void Start() //check monster type
 	{
 		if (enemyType == "melee")
 		{
@@ -28,19 +29,19 @@ public class EnemyAttack : MonoBehaviour
 		{
 			Attack();
 		}
-		yield return new WaitForSeconds(2);
-		StartCoroutine("Reset");
+		yield return new WaitForSeconds(2); //2s interval before next attack
+		StartCoroutine("Reset"); //restart attack sequence
 	}
 
 	private void Attack()
 	{
 		if (enemyType == "melee")
 		{
-			Debug.Log("melee hit!");
+			Debug.Log("melee hit!"); //melee anim + whatever the melee does to owner/player
 		}
 		else if (enemyType == "range")
 		{
-			Debug.Log("range hit!");
+			Instantiate (bullet, transform.position, Quaternion.identity);
 		}
 	}
 }
