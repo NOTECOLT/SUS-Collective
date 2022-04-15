@@ -11,6 +11,8 @@ public class TentacleDeath : MonoBehaviour
 	[SerializeField] private float moveSpeed;
 	private int hitsTaken;
 	[SerializeField] private EnemyAttack atkToggle;
+	[SerializeField] private Collider2D coll1;
+	[SerializeField] private Collider2D coll2;
 	
 
 	private void Start()
@@ -44,6 +46,8 @@ public class TentacleDeath : MonoBehaviour
 			//Debug.Log("back to the grind");
 			gameObject.layer = 10;
 			atkToggle.enabled = true;
+			coll1.enabled = true;
+			coll2.enabled = true;
 		}
 
 	}
@@ -58,6 +62,8 @@ public class TentacleDeath : MonoBehaviour
 				hitToggle = true;
 				hitsTaken = 0;
 				atkToggle.enabled = false;
+				coll1.enabled = false;
+				coll2.enabled = false;
 			}			
 		}
 	}

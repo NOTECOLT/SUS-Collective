@@ -13,6 +13,7 @@ public class PlayerAttack : MonoBehaviour {
     [SerializeField] private bool _projUnlocked = false;
     private Vector3 _attackPos;
     private float _attackAng;
+	[SerializeField] private AudioSource hitSound;
 
     // Public Variables
     public float attackTime = 0.15f;
@@ -21,6 +22,7 @@ public class PlayerAttack : MonoBehaviour {
     public float verticalOffset = 0;
     public GameObject projPrefab;
     public PauseMenu pm;
+
 
     void Start() {
         _projUnlocked = false;
@@ -71,6 +73,7 @@ public class PlayerAttack : MonoBehaviour {
     }
 
     private void StartAttack() {
+		hitSound.Play();
         _attackTimer = attackCooldown + attackTime;
 
         _isAttacking = true;

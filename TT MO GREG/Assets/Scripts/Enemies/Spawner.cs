@@ -9,7 +9,7 @@ public class Spawner : MonoBehaviour
 	[SerializeField] private float spawnWait;
 	public float spawnMostWait;
 	public float spawnLeastWait;
-	public float startWait;
+	[SerializeField] private float startWait;
 	[SerializeField] private GameObject parent;
 	[SerializeField] private GameObject[] spawnPoints;
 	public bool spawnToggle;

@@ -6,12 +6,12 @@ public class TriggerSpawn : MonoBehaviour
 {
 	public Spawner script;
 	public int collCount;
-	private float increment;
+	//private float increment;
 
 	private void Start()
 	{
 		collCount = 0;
-		increment = .1f;
+		//increment = .1f;
 	}
 	
     private void OnTriggerEnter2D(Collider2D other)

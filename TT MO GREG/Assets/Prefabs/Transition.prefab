@@ -134,6 +134,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   transition: {fileID: 493719689462301884}
+  _gt: {fileID: 0}
 --- !u!1 &493719690072925489
 GameObject:
   m_ObjectHideFlags: 0

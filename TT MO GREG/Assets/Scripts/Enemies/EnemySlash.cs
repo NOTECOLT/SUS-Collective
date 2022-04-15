@@ -13,7 +13,6 @@ public class EnemySlash : MonoBehaviour
 
 	void Update() {
 		_timer += Time.deltaTime;
-		Debug.Log(_timer);
 
 		if (_timer >= atkDuration) {
 			Debug.Log("melee miss!");

@@ -218,6 +218,8 @@ MonoBehaviour:
   hideSpotDis: 5
   moveSpeed: 1
   atkToggle: {fileID: 791332086790543849}
+  coll1: {fileID: 3808613697785869689}
+  coll2: {fileID: 1850128609}
 --- !u!95 &7349865998804760133
 Animator:
   serializedVersion: 3
