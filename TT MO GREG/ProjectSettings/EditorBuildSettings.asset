@@ -4,5 +4,29 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Menus/MainMenu.unity
+    guid: f426ddef232927043bf09161aa5874ff
+  - enabled: 1
+    path: Assets/Scenes/Menus/ControlsMenu.unity
+    guid: a99b87e510c4f2b46bdfdefda28fc7e3
+  - enabled: 1
+    path: Assets/Scenes/Menus/CreditsMenu.unity
+    guid: 10a865cd1fda8c840935c527d1caecf8
+  - enabled: 1
+    path: Assets/Scenes/HouseTest.unity
+    guid: 28aa74fafa6d16a458ddc154ede1e6d0
+  - enabled: 1
+    path: Assets/Scenes/EndlessMode.unity
+    guid: 01e2e35b390450543b7d7b7b705a2cee
+  - enabled: 1
+    path: Assets/Scenes/Menus/GameOver.unity
+    guid: 729f2388adf2e2a46993a41a35803bd4
+  - enabled: 1
+    path: Assets/Scenes/Menus/GameOverEndless.unity
+    guid: cefffbf282d32a04eba1cbf9bd233ff9
+  - enabled: 1
+    path: Assets/Scenes/Menus/GameWin.unity
+    guid: 4897a6568617cc246adcf57c1bc283f7
   m_configObjects: {}

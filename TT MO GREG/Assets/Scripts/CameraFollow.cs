@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class CameraFollow : MonoBehaviour {
     // Public Variables
-    public GameObject cameraFocus;
-    public float verticalOffset = -3.1f;
+    public Transform cameraFocus;
+    public Vector3 offset;
+    public float smoothSpeed = 0.125f;
 
     void start() {
         if (cameraFocus == null)
@@ -13,6 +14,13 @@ public class CameraFollow : MonoBehaviour {
     }
 
     void FixedUpdate() {
-        transform.position = new Vector3(cameraFocus.transform.position.x, cameraFocus.transform.position.y + verticalOffset, transform.position.z);
+        Vector3 camPos = cameraFocus.position + offset;
+        Vector3 smoothed = Vector3.Lerp(transform.position, camPos, smoothSpeed);
+
+        transform.position = smoothed;
+    }
+
+    public void SwitchFocus(Transform newFocus) {
+        cameraFocus = newFocus;
     }
 }

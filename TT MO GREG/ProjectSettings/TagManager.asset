@@ -7,18 +7,19 @@ TagManager:
   - Owner
   - Player Attack
   - Enemy
+  - Enemy Attack
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Enemy
   - Water
   - UI
   - Player
   - Wall
   - PlayerProjectile
   - EnemyProjectile
-  - 
+  - Tentacle
   - 
   - 
   - 
